@@ -21,6 +21,7 @@ const morseCode = {
   S: "...",
   T: "-",
   U: "..-",
+  V: "...-",
   W: ".--",
   X: "-..-",
   Y: "-.--",
@@ -34,14 +35,15 @@ export const convertToMorse = (userInput) => {
   console.log({ userInputArr });
 
   const morseTranslation = userInputArr.map((char) => {
-    if (char === " ") return " / ";
+    if (char === " ") return "/ ";
+    if (/^[,?'"!. ]+$/.test(char)) return;
     else {
       return morseCode[char] + " ";
     }
   });
   console.log({ morseTranslation });
-  //console.log(morseTranslation.join(""));
-  return morseTranslation.join("");
+
+  return morseTranslation.join("").trim();
 };
 
 //Function to convert to English
