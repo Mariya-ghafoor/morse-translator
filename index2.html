@@ -6,25 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/style.css" />
     <script type="module" src="./scripts/script.js" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin:wght@700&family=Roboto&display=swap"
-      rel="stylesheet"
-    />
     <title>Morse Translator</title>
   </head>
   <body>
-    <div class="bg-image"></div>
-
+    <h1>Morse Translator</h1>
+    <p>
+      While writing morse code please separate characters by a single space and
+      words by a '/'
+    </p>
     <div class="container">
-      <div class="container__header">
-        <h1>Morse Translator</h1>
-        <p>
-          While writing morse code please separate characters by a single space
-          and words by a '/'
-        </p>
-      </div>
       <form>
         <input
           type="text"
@@ -32,7 +22,7 @@
           id="userInput"
           class="userInput"
           placeholder="Write your text here"
-          maxlength="70"
+          maxlength="40"
         />
       </form>
 

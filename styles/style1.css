@@ -2,21 +2,25 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "M PLUS Code Latin", sans-serif;
+  font-family: 'M PLUS Code Latin', sans-serif;
 }
 
 h1 {
   font-size: 400%;
+
 }
 
 .bg-image {
   /* The image used */
   background-image: url("../images/battlefield.webp");
+
   /* Add the blur effect */
   filter: blur(2px);
   -webkit-filter: blur(2px);
+
   /* Full height */
   height: 100vh;
+
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
@@ -32,6 +36,7 @@ h1 {
   gap: 30px;
   height: 90vh;
   width: 80vw;
+
   background-color: rgba(0, 0, 0, 0.4);
   position: absolute;
   top: 50%;
@@ -60,14 +65,14 @@ form {
 }
 
 .userInput:focus {
-  border: 4px solid yellow;
+  border: 4px solid yellow
 }
 
 section {
   height: 70%;
   width: 80%;
   opacity: 0;
-  transition: opacity 1s;
+  transition: opacity 2s;
 }
 
 .translation-para {

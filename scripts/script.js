@@ -3,6 +3,7 @@ import { validateInput } from "./modules/validate-input.js";
 
 const form = document.querySelector("form");
 const translationPara = document.querySelector("#translationPara");
+// const userInput = document.getElementById("userInput").value.trim();
 
 //Validate Input
 // Remove trailing spaces
@@ -13,23 +14,29 @@ const translationPara = document.querySelector("#translationPara");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const userInput = document.getElementById("userInput").value.trim();
-  console.log(userInput);
-  // let convertedCode = "";
 
-  //Input Validation
-
-  // //Should either include only alphabets and spaces (for English) or dots,dashes, spaces and forward slash for morse code
-  // if (/^[a-zA-Z ]+$/.test(userInput)) {
-  //   convertedCode = convertToMorse(userInput);
-  // } else if (/^[\.\-\/\s]+$/.test(userInput)) {
-  //   convertedCode = convertToEnglish(userInput);
-  //   console.log({ convertedCode });
-  //   if (convertedCode.length === 0)
-  //     convertedCode =
-  //       "Hmm..that may look like Morse code but its not. Try again.";
-  // } else {
-  //   convertedCode = "Please enter either English or Morse code";
-  // }
+  //Clear input field after receiving input
+  //document.getElementById("userInput").value = "";
 
   translationPara.innerText = validateInput(userInput);
+  sectionClassHandlerAdd();
+});
+
+const sectionClassHandlerAdd = () => {
+  const translation = document.querySelector("section");
+  translation.classList.add("show");
+};
+
+const sectionClassHandlerRemove = () => {
+  const translation = document.querySelector("section");
+  translation.classList.remove("show");
+};
+
+document.getElementById("userInput").addEventListener("keyup", (e) => {
+  console.log("i am focused");
+  console.log(e.target.value);
+  if (e.target.value === "") {
+    console.log("input is empty");
+    sectionClassHandlerRemove();
+  }
 });
