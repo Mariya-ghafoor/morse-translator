@@ -1,0 +1,19 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+}
+
+.userInput {
+  border: 4px solid green;
+  height: 50px;
+  width: 400px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 40px;
+}
+
+.translation-para {
+  font-size: 40px;
+}/*# sourceMappingURL=style.css.map */
