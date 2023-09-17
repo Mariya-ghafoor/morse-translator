@@ -72,13 +72,13 @@ form {
 }
 
 .userInput:focus {
-  border: 2px solid blue;
+  outline: none !important;
 }
 
 .translate__button {
   // display: block;
   // padding: 10px;
-  font-size: 20px;
+  font-size: 30px;
   border-radius: 10px;
   width: 50%;
   background-color: black;
@@ -95,9 +95,10 @@ section {
   opacity: 0;
   transition: opacity 1s;
   overflow: scroll;
+  letter-spacing: 3px;
 }
 
-.translation-para {
+.translation__para {
   font-size: 30px;
   height: 100%;
   width: 100%;
@@ -117,6 +118,9 @@ section {
   .translation-para {
     font-size: 20px;
   }
+  .translate__button {
+    font-size: 20px;
+  }
 }
 
 // @container (min-width: 700px) {
@@ -124,6 +128,19 @@ section {
 //     font-size: 100px;
 //   }
 // }
+
+.validInputField {
+  border: 2px solid green;
+}
+
+.errorField {
+  border: 2px solid red;
+}
+
+.errorMessage {
+  color: red;
+  border: 10px soild white;
+}
 
 .show {
   opacity: 1;

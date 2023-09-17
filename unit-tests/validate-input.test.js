@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import { validateInput } from "../scripts/modules/validate-input.js";
 
 describe("must tell the user to enter valid input", () => {
@@ -20,9 +24,7 @@ describe("must tell the user to enter valid input", () => {
   });
 
   it("must not accept empty string", () => {
-    expect(validateInput(" ")).toBe(
-      "Please enter either English or Morse code"
-    );
+    expect(validateInput("")).toBe("Please enter either English or Morse code");
   });
 
   it("must not accept gibberish morse code and inform the user", () => {

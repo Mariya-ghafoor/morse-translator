@@ -3,6 +3,7 @@ import { validateInput } from "./modules/validate-input.js";
 
 const form = document.querySelector("form");
 const translationPara = document.querySelector("#translationPara");
+
 // const userInput = document.getElementById("userInput").value.trim();
 
 //Validate Input
@@ -35,7 +36,7 @@ const sectionClassHandlerRemove = () => {
 
 document.getElementById("userInput").addEventListener("keyup", (e) => {
   console.log("i am focused");
-  console.log(e.target.value);
+  // console.log(e.target.value);
   if (e.target.value === "") {
     console.log("input is empty");
     sectionClassHandlerRemove();

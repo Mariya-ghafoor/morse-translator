@@ -1,4 +1,3 @@
-//import { describe } from "yargs";
 import { convertToMorse } from "../scripts/modules/convert.js";
 
 //Must accept ? ! etc
