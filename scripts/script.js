@@ -12,6 +12,7 @@ const translationPara = document.querySelector("#translationPara");
 // handle cases where morse code may be wrong and cannot be translated
 
 form.addEventListener("submit", (e) => {
+  console.log("form submitted");
   e.preventDefault();
   const userInput = document.getElementById("userInput").value.trim();
 
