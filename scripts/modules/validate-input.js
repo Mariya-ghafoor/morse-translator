@@ -4,16 +4,9 @@
 import { convertToEnglish, convertToMorse } from "./convert.js";
 
 export const validateInput = (userInput) => {
-  console.log("i m in validate");
   let convertedCode;
   //Should either include only alphabets with spaces and punctuation (for English) or dots,dashes, spaces and forward slash for morse code
   //Should not contain just spaces or punctuation
-
-  // if (
-  //   /^[a-zA-Z,?'"!. ]+$/.test(userInput) &&
-  //   !/^[\s]+$/.test(userInput) &&
-  //   !/^[,?'"!. ]+$/.test(userInput)
-  // ) {
 
   if (
     /^[a-zA-Z\s?!,.:'"]+$/.test(userInput) &&
@@ -30,17 +23,13 @@ export const validateInput = (userInput) => {
   } else {
     convertedCode = "Please enter either English or Morse code";
   }
-  console.log({ convertedCode });
   errorHandler(convertedCode);
-
   return convertedCode;
 };
 
 const errorHandler = (convertedCode) => {
   const userInputField = document.getElementById("userInput");
   const translationPara = document.querySelector("#translationPara");
-  // console.log(userInputField.classList);
-  // console.log(translationPara.classList);
   if (
     convertedCode === "Please enter either English or Morse code" ||
     convertedCode ===
@@ -59,12 +48,4 @@ const errorHandler = (convertedCode) => {
       translationPara.classList.remove("errorMessage");
     } catch {}
   }
-
-  // document.getElementById("userInput").classList.add("errorField");
-  // document.querySelector("section").classList.add("errorMessage");
 };
-
-// export const removeErrorHandler = () => {
-//   document.getElementById("userInput").classList.remove("errorField");
-//   document.querySelector("section").classList.remove("errorMessage");
-// };

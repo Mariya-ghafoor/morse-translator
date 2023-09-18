@@ -32,7 +32,6 @@ const morseCode = {
 
 export const convertToMorse = (userInput) => {
   let userInputArr = userInput.toUpperCase().split("");
-  console.log({ userInputArr });
 
   const morseTranslation = userInputArr.map((char) => {
     if (char === " ") return "/ ";
@@ -41,27 +40,19 @@ export const convertToMorse = (userInput) => {
       return morseCode[char] + " ";
     }
   });
-  console.log({ morseTranslation });
-
   return morseTranslation.join("").trim();
 };
 
 //Function to convert to English
 
 export const convertToEnglish = (userInput) => {
-  console.log("im converting to english", userInput);
   const userInputArr = userInput.split(" ");
-  console.log({ userInput });
 
   const englishTranslation = userInputArr.map((char) => {
-    console.log({ char });
     if (char === "/") return " ";
     const morseCodeKeys = Object.keys(morseCode);
     const englishChar = morseCodeKeys.find((key) => morseCode[key] === char);
     return englishChar;
   });
-
-  console.log(englishTranslation);
-
   return englishTranslation.join("");
 };

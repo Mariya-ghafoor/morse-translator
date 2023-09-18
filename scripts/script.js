@@ -4,8 +4,6 @@ import { validateInput } from "./modules/validate-input.js";
 const form = document.querySelector("form");
 const translationPara = document.querySelector("#translationPara");
 
-// const userInput = document.getElementById("userInput").value.trim();
-
 //Validate Input
 // Remove trailing spaces
 // only accept alphabets and space
@@ -13,13 +11,8 @@ const translationPara = document.querySelector("#translationPara");
 // handle cases where morse code may be wrong and cannot be translated
 
 form.addEventListener("submit", (e) => {
-  console.log("form submitted");
   e.preventDefault();
   const userInput = document.getElementById("userInput").value.trim();
-
-  //Clear input field after receiving input
-  //document.getElementById("userInput").value = "";
-
   translationPara.innerText = validateInput(userInput);
   sectionClassHandlerAdd();
 });
@@ -35,10 +28,7 @@ const sectionClassHandlerRemove = () => {
 };
 
 document.getElementById("userInput").addEventListener("keyup", (e) => {
-  console.log("i am focused");
-  // console.log(e.target.value);
   if (e.target.value === "") {
-    console.log("input is empty");
     sectionClassHandlerRemove();
   }
 });
